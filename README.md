@@ -8,6 +8,7 @@
 │   |   ├── portenum.kenz[text] - list of open ports
 │   |   ├── webenum.kenz[text] - list of webservers
 │   |   ├── asnenum.kenz[text] - list of ASNs
+│   |   ├── mailenum.kenz[text] - list of email addresses
 │   |   ├── headenum.kenz[text] - list of status codes, titles & webservers
 │   |   ├── dnsenum.kenz[text] - list of DNS records
 │   |   ├── conenum.kenz[html] - list of hidden files/directories
