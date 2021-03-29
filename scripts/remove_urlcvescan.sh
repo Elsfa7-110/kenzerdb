@@ -1,5 +1,5 @@
 if getopts "k:" arg; then
-	for file in `ls ../directory/*/socscan.kenz`
+	for file in `ls ../directory/*/urlcvescan.kenz`
 	do
 		ex +g/$OPTARG/d -cwq $file
 	done
