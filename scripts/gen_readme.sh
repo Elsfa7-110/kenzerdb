@@ -22,7 +22,7 @@ echo "| VULNSCAN | `cat ../directory/*/vulnscan.kenz | wc -l` |" >> ../README.md
 echo "| SUBSCAN | `cat ../directory/*/subscan.kenz | wc -l` |" >> ../README.md
 
 echo "## DOMAIN-WISE STATS" >> ../README.md
-echo "| DOMAIN | SUBENUM | PORTENUM  | PORTENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
+echo "| DOMAIN | SUBENUM | PORTENUM  | SERVENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
 echo "| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |" >> ../README.md
 for i in `ls ../directory`
     do
