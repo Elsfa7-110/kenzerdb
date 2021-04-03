@@ -8,6 +8,7 @@
 │   |   ├── portenum.kenz[text] - list of open ports
 │   |   ├── webenum.kenz[text] - list of webservers
 │   |   ├── socenum.kenz[text] - list of social media accounts
+│   |   ├── servenum.kenz[text] - list of services
 │   |   ├── asnenum.kenz[text] - list of ASNs
 │   |   ├── headenum.kenz[text] - list of status codes, titles & webservers for domains
 │   |   ├── urlheadenum.kenz[text] - list of status codes, titles & webservers for urls
