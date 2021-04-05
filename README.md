@@ -30,6 +30,8 @@
 │   |   ├── *.log[text] - log files for kenzer-binaries
 │   |   ├── nuclei[directory] - log files for nuclei
 │   |   ├── jaeles[directory] - log files for jaeles
+│   |   ├── gocrawler[directory] - log files for gocrawler
+│   |   ├── aquatone[directory] - log files for aquatone
 ├── exploitation - gatherings from freaker
 |   ├── *.freakin[text] - input data
 |   ├── *.freakem[text] - extracted data
