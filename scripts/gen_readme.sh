@@ -4,6 +4,9 @@ echo "`bash summarize_vulnscan.sh | grep '\[' | sort -u`" > ../vulnscan.txt
 echo "`bash summarize_subscan.sh | grep '\[' | sort -u`" > ../subscan.txt
 echo "`bash summarize_cscan.sh | grep '\[' | sort -u`" > ../cscan.txt
 echo "`bash summarize_servenum.sh | grep '\[' | sort -u`" > ../servenum.txt
+echo "`bash summarize_socenum.sh | grep '\[' | sort -u`" > ../socenum.txt
+echo "`bash summarize_favscan.sh | grep '\[' | sort -u`" > ../favscan.txt
+echo "`bash summarize_idscan.sh | grep '\[' | sort -u`" > ../idcan.txt
 
 echo "## MODULE-WISE STATS" > ../README.md
 echo "| MODULE | TOTAL COUNT |" >> ../README.md
@@ -22,7 +25,7 @@ echo "| VULNSCAN | `cat ../directory/*/vulnscan.kenz | wc -l` |" >> ../README.md
 echo "| SUBSCAN | `cat ../directory/*/subscan.kenz | wc -l` |" >> ../README.md
 
 echo "## DOMAIN-WISE STATS" >> ../README.md
-echo "| DOMAIN | SUBENUM | PORTENUM  | PORTENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
+echo "| DOMAIN | SUBENUM | PORTENUM  | SERVENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
 echo "| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |" >> ../README.md
 for i in `ls ../directory`
     do

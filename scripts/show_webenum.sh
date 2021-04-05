@@ -3,6 +3,6 @@ if getopts "d:" arg; then
 else
     for i in `ls ../directory`
     do
-        echo "$i `cat ../directory/$i/webenum.kenz 2>/dev/null`"
+        cat ../directory/$i/webenum.kenz 2>/dev/null
     done
 fi
