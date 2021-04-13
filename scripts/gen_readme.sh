@@ -1,4 +1,4 @@
-echo "`ls -A ../directory/`" > ../domains.txt
+echo "`ls -A ../directory/ | sed 's/#/\//g' `"  > ../targets.txt
 echo "`bash summarize_cvescan.sh | grep '\[' | sort -u`" > ../cvescan.txt
 echo "`bash summarize_vulnscan.sh | grep '\[' | sort -u`" > ../vulnscan.txt
 echo "`bash summarize_subscan.sh | grep '\[' | sort -u`" > ../subscan.txt
@@ -11,7 +11,7 @@ echo "`bash summarize_idscan.sh | grep '\[' | sort -u`" > ../idcan.txt
 echo "## MODULE-WISE STATS" > ../README.md
 echo "| MODULE | TOTAL COUNT |" >> ../README.md
 echo "| :----: | :----: |" >> ../README.md
-echo "| DOMAINS | `ls -A ../directory/ | wc -l` |" >> ../README.md
+echo "| TARGETS | `ls -A ../directory/ | wc -l` |" >> ../README.md
 echo "| SUBENUM | `cat ../directory/*/subenum.kenz | wc -l` |" >> ../README.md
 echo "| PORTENUM | `cat ../directory/*/portenum.kenz | wc -l` |" >> ../README.md
 echo "| SERVENUM | `cat ../directory/*/servenum.kenz | wc -l` |" >> ../README.md
@@ -24,10 +24,10 @@ echo "| CVESCAN | `cat ../directory/*/cvescan.kenz | wc -l` |" >> ../README.md
 echo "| VULNSCAN | `cat ../directory/*/vulnscan.kenz | wc -l` |" >> ../README.md
 echo "| SUBSCAN | `cat ../directory/*/subscan.kenz | wc -l` |" >> ../README.md
 
-echo "## DOMAIN-WISE STATS" >> ../README.md
-echo "| DOMAIN | SUBENUM | PORTENUM  | SERVENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
+echo "## TARGET-WISE STATS" >> ../README.md
+echo "| TARGET | SUBENUM | PORTENUM  | SERVENUM | WEBENUM | ASNENUM | DNSENUM | HEADENUM | FAVSCAN | CVESCAN | VULNSCAN | SUBSCAN |" >> ../README.md
 echo "| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |" >> ../README.md
 for i in `ls ../directory`
     do
-        echo "| $i | `cat ../directory/$i/subenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/portenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/servenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/webenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/asnenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/dnsenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/headenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/favscan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/cvescan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/vulnscan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/subscan.kenz 2>/dev/null | wc -l` |" >> ../README.md
+        echo "| `echo $i | sed 's/#/\//g'` | `cat ../directory/$i/subenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/portenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/servenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/webenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/asnenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/dnsenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/headenum.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/favscan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/cvescan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/vulnscan.kenz 2>/dev/null | wc -l` | `cat ../directory/$i/subscan.kenz 2>/dev/null | wc -l` |" >> ../README.md
     done
