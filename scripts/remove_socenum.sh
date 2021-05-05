@@ -1,5 +1,5 @@
 if getopts "k:" arg; then
-	for file in `ls ../directory/*/socenum.kenz`
+	for file in `ls ../directory/*/socenum.kenz*`
 	do
 		ex +g/$OPTARG/d -cwq $file
 	done
